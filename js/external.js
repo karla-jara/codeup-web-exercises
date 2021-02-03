@@ -34,5 +34,13 @@ else {
     alert("Sorry you may not enroll at this time :(");
 }
 
-var purchasedItems = parseInt(confirm("How many items will you purchase today?"));
-var offerExpired = confirm("Has offer expired?")
+var purchasedItems = confirm("Will you purchase more than two items?");
+var isPremiumMember = confirm("Are you a premium member?");
+var offerValid = confirm("Is offer valid?")
+
+if ((purchasedItems === true) || (isPremiumMember === true)) && offerValid === true;
+{
+    alert("You have a discount applied!");
+} else {
+    alert("Sorry no discount applied at this time");
+}
