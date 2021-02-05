@@ -31,6 +31,9 @@ console.log(sayHello(helloMessage));
  * console.
  */
 
+var myName = "Karla J";
+console.log(sayHello(myName));
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
@@ -52,6 +55,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+function isTwo (x) {
+    return x === 2;
+
+}
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -64,9 +72,14 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-
+function calculateTip(tipPercent, billTotal) {
+    var tip = billTotal * tipPercent;
+    return tip;
+}
+// alternatively the variable above did not have to be used and the bottom code could be used
+//      return billTotal * tipPercent
 /**
- * TODO:
+ * TODO:t
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
