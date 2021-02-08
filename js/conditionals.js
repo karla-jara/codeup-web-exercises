@@ -1,7 +1,9 @@
 "use strict";
 
 /* ########################################################################## */
-
+// This function will verify if the color entered will be blue, red, or cyan.
+// If the user enters a color other than the listed then it will return a message stating so
+//FunctionsExercise1.1
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -19,70 +21,71 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-var verifyColor = prompt("Enter your chosen color");
-
-function analyzeColor (color) {
-
-
-    if (color === "blue") {
-        return"Blue is the color of the sky.";
-    } else if (color === "red") {
-        return"Strawberries are red.";
-    } else if (color === "cyan") {
-        return"I dont know anything about cyan.";
-    } else {
-        return"That is not one of the chosen colors.";
-    }
-}
-console.log(analyzeColor(verifyColor));
-
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color every time the page loads)
-    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-    var randomColor = colors[Math.floor(Math.random() * colors.length)];
-    /**
-     * TODO:
-     * Pass the `randomColor` variable to your function and console.log the results.
-     * You should see a different message every time you refresh the page
-     */
-    console.log(randomColor);
-    console.log(analyzeColor(randomColor));
-
-
-    /**
-     * TODO:
-     * Refactor your above function to use a switch-case statement
-     */
-
-    function analyzeColorSwitch(color) {
-        switch (color) {
-            case "blue":
-                return("Blue is the color of the sky.");
-                break;
-            case "red":
-                return("Strawberries are red.");
-                break;
-            case "cyan":
-                return("I dont know anything about cyan.");
-                break;
-            default:
-                return("That is not one of the chosen colors.");
-
-        }
-    }
-    console.log(analyzeColorSwitch(verifyColor));
-/**
- * TODO:
- * Prompt the user for a color when the page loads, and pass the input from the
- * user to your `analyzeColor` function. Alert the return value from your
- * function to show it to the user.
- */
-var userColor = prompt("Please enter another color.")
-
-console.log(analyzeColor(alert("You entered " + userColor)));
+//
+// var verifyColor = prompt("Enter your chosen color");
+//
+// function analyzeColor (color) {
+//
+//
+//     if (color === "blue") {
+//         return"Blue is the color of the sky.";
+//     } else if (color === "red") {
+//         return"Strawberries are red.";
+//     } else if (color === "cyan") {
+//         return"I dont know anything about cyan.";
+//     } else {
+//         return"That is not one of the chosen colors.";
+//     }
+// }
+// console.log(analyzeColor(verifyColor));
+//
+// // Don't change the next two lines!
+// // These lines create two variables for you:
+// // - `colors`: a list of the colors of the rainbow
+// // - `randomColor`: contains a single random color value from the list (this
+// //                  will contain a different color every time the page loads)
+//     var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//     var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//     /**
+//      * TODO:
+//      * Pass the `randomColor` variable to your function and console.log the results.
+//      * You should see a different message every time you refresh the page
+//      */
+//     console.log(randomColor);
+//     console.log(analyzeColor(randomColor));
+//
+//
+//     /**
+//      * TODO:
+//      * Refactor your above function to use a switch-case statement
+//      */
+//
+//     function analyzeColorSwitch(color) {
+//         switch (color) {
+//             case "blue":
+//                 return("Blue is the color of the sky.");
+//                 break;
+//             case "red":
+//                 return("Strawberries are red.");
+//                 break;
+//             case "cyan":
+//                 return("I dont know anything about cyan.");
+//                 break;
+//             default:
+//                 return("That is not one of the chosen colors.");
+//
+//         }
+//     }
+//     console.log(analyzeColorSwitch(verifyColor));
+// /**
+//  * TODO:
+//  * Prompt the user for a color when the page loads, and pass the input from the
+//  * user to your `analyzeColor` function. Alert the return value from your
+//  * function to show it to the user.
+//  */
+// var userColor = prompt("Please enter another color.")
+//
+// console.log(analyzeColor(alert("You entered " + userColor)));
 
 /* ########################################################################## */
 
@@ -105,6 +108,34 @@ console.log(analyzeColor(alert("You entered " + userColor)));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+var amountTotal = prompt("What is your total purchase price?");
+var luckyN = [0, 1, 2, 3, 4, 5];
+var randomLuckyN = luckyN[Math.floor(Math.random() * luckyN.length)];
+
+function calculateTotal(totalAmount){
+
+    if (randomLuckyN === 0)
+        return 0 - 0 * amountTotal;
+
+    if (randomLuckyN === 1)
+        return .1 - (.1 * amountTotal);
+
+    if (randomLuckyN === 2);
+        return .25 - (.25 * amountTotal);
+
+    if (randomLuckyN === 3);
+        return .35 - (.35 * amountTotal);
+
+    if (randomLuckyN === 4);
+        return .5 - (.5 * amountTotal);
+
+    if (randomLuckyN === 5);
+        return amountTotal - (1 * amountTotal);
+
+}
+
+console.log(calculateTotal(alert("Your total discount today is $" + randomLuckyN.toFixed(2))));
+
 
 /**
  * TODO:
