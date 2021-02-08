@@ -108,33 +108,13 @@
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-var amountTotal = prompt("What is your total purchase price?");
-var luckyN = [0, 1, 2, 3, 4, 5];
-var randomLuckyN = luckyN[Math.floor(Math.random() * luckyN.length)];
 
-function calculateTotal(totalAmount){
-
-    if (randomLuckyN === 0)
-        return 0 - 0 * amountTotal;
-
-    if (randomLuckyN === 1)
-        return .1 - (.1 * amountTotal);
-
-    if (randomLuckyN === 2);
-        return .25 - (.25 * amountTotal);
-
-    if (randomLuckyN === 3);
-        return .35 - (.35 * amountTotal);
-
-    if (randomLuckyN === 4);
-        return .5 - (.5 * amountTotal);
-
-    if (randomLuckyN === 5);
-        return amountTotal - (1 * amountTotal);
-
+function calculateTotal (luckyN,totalAmount) {
+    var discountPrice = (luckyN * totalAmount);
+    return discountPrice.toFixed(2)
 }
 
-console.log(calculateTotal(alert("Your total discount today is $" + randomLuckyN.toFixed(2))));
+console.log(calculateTotal(.25,100));
 
 
 /**
@@ -145,8 +125,11 @@ console.log(calculateTotal(alert("Your total discount today is $" + randomLuckyN
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
-
+var luckyNumber = Math.floor(Math.random() * 6);
+var userTotalBill = Number.prompt("What is your bill total?");
+alert("Your lucky number was " + luckyNumber);
+alert("Your price before discount was $" + userTotalBill);
+var calculateTotal = userTotalBill - (dis)
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
