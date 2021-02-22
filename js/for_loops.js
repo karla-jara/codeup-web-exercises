@@ -16,21 +16,23 @@ For example, showMultiplicationTable(7) should output:
 7 x 10 = 70
  */
 
+// first statement is for declaring iteration variable
+// Iteration is just a single loop
+// second statement is for testing if we want to run the loop again
+// if the second statement is true the loop will run again
+// third statement is for incrementing the iteration variable
+// basically this just makes an i variable go up or down at the end of the loop
+
 function showMultiplicationTable(number) {
-    for (var i = 1; i <= 10; i++)
-        // first statement is for declaring iteration variable
-        // Iteration is just a single loop
-        // second statement is for testing if we want to run the loop again
-        // if the second statement is true the loop will run again
-        // third statement is for incrementing the iteration variable
-        // basically this just makes an i variable go up or down at the end of the loop
+    for (var multipleThru10 = 1; multipleThru10 <= 10; multipleThru10++)
+
     {
-        console.log(number + " x " + i + " = " + (number * i));
+        console.log(number + " x " + multipleThru10 + " = " + (number * multipleThru10));
     }
     }
 
-    for (var i = 1; i <= 10; i++) {
-        showMultiplicationTable(i)
+    for (var numberToMultiply = 1; numberToMultiply <= 1; numberToMultiply++) {
+        showMultiplicationTable(9)
     }
 
 
@@ -104,6 +106,6 @@ for (var outerLoop = 1; outerLoop <= 9; outerLoop++) {
 */
 
 for (var i = 100; i >= 5; i = i - 5) {
-
+//                        could also use i-= 5 for the last statement
     console.log(i);
 }
