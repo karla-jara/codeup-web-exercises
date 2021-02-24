@@ -7,6 +7,8 @@
      * 'names'.
      */
 
+
+
     const names = ['gaby', 'gerardo', 'karla', 'andres'];
 
     /**
@@ -15,6 +17,8 @@
      * array.
      */
 
+    console.log("Returning the number of elements in an array")
+
     console.log(names.length);
 
     /**
@@ -22,6 +26,9 @@
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
+
+    console.log("Returned names in array using the element index");
+
     console.log(names[0]);
     console.log(names[1]);
     console.log(names[2]);
@@ -32,6 +39,9 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
+
+    console.log("Return names in array using a for_loop");
+
     for (var i = 0; i < names.length; i++) {
         console.log(names[i]);
     }
@@ -40,6 +50,8 @@
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+    console.log("Return names in array using forEach");
+
     names.forEach(function (nombre) {
         console.log(nombre);
     });
@@ -58,16 +70,22 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    function firstName() {
-        console.log(names[0]);
+    function first(arr) {  // first: returns the first item in the array
+        return (arr[0]);
     }
 
-    function secondName() {
-        console.log(names[1]);
+    function second(arr) {  // returns the second item in the array
+        return (arr[1]);
     }
 
-    function lastName() {
-        var namesList = names.length - 1;
-        console.log(namesList);
+    function last(arr) {  // returns the last item in the array
+        return arr[arr.length -1];
     }
-});
+    console.log("Return first, second and last element in 'names' array")
+
+    console.log(first(names));
+    console.log(second(names));
+    console.log(last(names));
+
+})();
+
