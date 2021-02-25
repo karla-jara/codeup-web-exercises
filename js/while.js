@@ -37,21 +37,20 @@ Use a do-while loop to log to the console the amount of cones sold to each perso
 This is a way get the random numbers for this exercise.
 */
     function coneSales () {
-        var conesToSell = Math.floor((Math.random() * 5) + 5);
-        alert("You must sell " + conesToSell + " cones before you can go home.");
+        var conesToSell = Math.floor((Math.random() * 10) + 10);
+        console.log("You must sell " + conesToSell + " cones before you can go home.");
         do {
             var conesBought = Math.floor((Math.random() * 5) + 1);
-            conesToSell = conesToSell - conesBought;
-            alert("You sold " + conesBought + " and have " + conesToSell + " cone(s) left to sell");
+            if (conesToSell >= conesBought) {
+                conesToSell = conesToSell - conesBought
+                console.log("You sold " + conesBought + " and have " + conesToSell + " cone(s) left to sell");
+      git      } else {
 
-            if (conesBought > conesToSell && conesToSell > 0) {
-                alert("Sorry, we cannot sell " + conesBought + " we only have " + conesToSell + " left.");
-
-                alert("Yay! I sold all my cones!");
-                break;
+                console.log("Sorry, we cannot sell " + conesBought + " we only have " + conesToSell + " left.");
             }
 
-        }   while (conesToSell > conesBought && conesToSell > 0) {
-            }
+        }   while (conesToSell > 0)
+            console.log("Yay! I sold all my cones!");
+
     }
     console.log(coneSales())

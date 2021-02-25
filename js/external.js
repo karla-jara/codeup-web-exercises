@@ -17,13 +17,13 @@ var lm = parseInt(prompt("How many days would you like to rent the Little Mermai
 var bb = parseInt(prompt("How many days would you like to rent Brother Bear?"));
 var h = parseInt(prompt("How many days would you like to rent Hercules?"));
 
-var price = 3;
+var price = 3; // price per movie rental per night
 
-lm *= price;
-bb *= price;
-h *= price;
+lm *= price; // reconfiguring var for Little Mermaid
+bb *= price; // reconfiguring var for Brother Bear
+h *= price; // reconfiguring var for Hercules
 
-alert("Your total rental price is " + (lm + bb + h));
+alert("Your total rental price is $" + (lm + bb + h)); // adds the three values and alerts user of the total price
 
 // This code will provide the total pay expected determined by the hours worked entered by the user
 var google = parseInt(prompt("How many hours did you work for Google?"));
@@ -34,7 +34,7 @@ google *= 400;
 amazon *= 380;
 facebook *= 350;
 
-var totalPay = alert("Your total pay is " + (google + amazon + facebook));
+var totalPay = alert("Your total pay is $" + (google + amazon + facebook));
 
 // This code determines whether the user may enroll in a class based on yes or no questions answered
 var classFull = confirm("Is this class full?");
@@ -51,9 +51,12 @@ var purchasedItems = confirm("Will you purchase more than two items?");
 var isPremiumMember = confirm("Are you a premium member?");
 var offerValid = confirm("Is offer valid?")
 
-if (((purchasedItems === true) || (isPremiumMember === true)) && offerValid === true);
-    alert("You have a discount applied!");
+if (((purchasedItems === true) || (isPremiumMember === true)) && (offerValid === true));
 
-else
 
-    alert("Sorry no discount applied at this time");
+
+    alert("You have a discount applied!")
+if
+    (((purchasedItems === false) || (isPremiumMember === false) && (offerValid === false)));
+    alert("Sorry, a discount may not be applied at this time.")
+

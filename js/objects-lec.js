@@ -43,6 +43,9 @@
 
 //* TODO: Create a new Object and call it 'myCar' using either way to do so shown above (object instance or object literal)
 
+var myCar = {};
+
+console.log(myCar);
 
 
 // That's great! But our car object doesn't have much going on, does it? There's no depth or meat to it - how can we fill our object in?
@@ -76,6 +79,10 @@
 
 
 // TODO: Fill in your myCar object with properties of make, model, and year with the correct values. If you don't own a vehicle, fill in the details with your favorite vehicle.
+
+myCar = {make: "Toyota", model:"Tundra", year:"2011"};
+
+console.log(myCar);
 
 //For me? I'm missing the year for myCar so. .
 
@@ -116,6 +123,10 @@
 
 // TODO: Add an array of features that your vehicle has!
 
+myCar.features = ["Bed liner", "Back Electric Window", "Four doors", "Side steps"];
+
+console.log(myCar);
+
 //What about who owns our car? That could be an object itself if we think it through - the owner has a firstName and a lastName at the very least, right?
 //Let's try nesting this object inside of our car object we've been building out
 
@@ -124,6 +135,15 @@
 // myCar.owner = carOwner;
 
 // TODO: Nest a 'carOwner' object of your own into this growing myCar object and console.log the results!
+
+var carOwner = {
+    firstName : "Karla",
+    lastName : "Jara"
+}
+
+myCar.owner = carOwner;
+
+console.log(myCar);
 
 // console.log(myCar);
 
@@ -140,6 +160,18 @@
 */
 
 //Let's tie some things together: Let's make a garage with another car!
+
+myOtherCar ={
+    make: "Audi",
+    model: "TT",
+    year: 2002,
+    features: ["Manual shift", "Convertible", "18 inch wheels", "awesome"],
+    owner: {
+        firstName: "Karla",
+        lastName: "Jara"
+    }
+}
+
 
 // sigotherCar = {
 //     make: "Honda",
@@ -160,6 +192,12 @@
 // ]
 
 // console.log(theGarage);
+
+var myGarage = [
+    myCar, myOtherCar
+]
+
+console.log(myGarage);
 
 //Now: loop through an ARRAY of OBJECTS, accessing our turnOn function for our vehicles
 //Also note: we used the keyword *this* on the other vehicle's turnOn function, so this will be a good experiment to see the results
