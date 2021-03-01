@@ -9,10 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello2 (name) {
-    return "You look " + name + "!";
-}
-console.log(sayHello2("amazing"));
+
 
 function sayHello (name) {
     return ("Hello, " + name);
@@ -27,6 +24,7 @@ console.log(sayHello("Codeup"))
  *
  * console.log 'helloMessage' to check your work
  */
+
 var helloMessage = "Karla Jara";
 
 console.log(sayHello(helloMessage));
@@ -36,6 +34,10 @@ console.log(sayHello(helloMessage));
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+function sayHello2 (name) {
+    return "You look " + name + "!";
+}
+console.log(sayHello2("amazing"));
 
 var myName = "Karla J";
 console.log(sayHello(myName));
@@ -81,12 +83,13 @@ console.log(isTwo(random));
  */
 function calculateTip(tipPercent, billTotal) {
     var tip = billTotal * tipPercent;
-    return ("$" + (tip));
-
+    // alternatively the variable above did not have to be used and the bottom code could be used
+//      return billTotal * tipPercent
+    return ("$" + (tip).toFixed(2));
+}
 console.log(calculateTip(.20, 100));
 
-// alternatively the variable above did not have to be used and the bottom code could be used
-//      return billTotal * tipPercent
+
 /**
  * TODO:t
  * Use prompt and alert in combination with your calculateTip function to
@@ -97,10 +100,10 @@ var userBillTotal = (prompt("What is the bill total?"));
 var userTotalTip = (prompt("What percent would you like to tip?"));
 
 var tipCalculated = (userTotalTip/100) * userBillTotal;
-var tipMessage = "You would tip $" + tipCalculated;
 
 console.log(calculateTip(tipCalculated,userBillTotal));
-alert(tipMessage);
+alert("You should tip $" + ((tipCalculated).toFixed(2)));
+
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -115,6 +118,18 @@ alert(tipMessage);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+function applyDiscount (priceBeforeDiscount, discountPercentage) {
+    var priceAfterDiscount = (priceBeforeDiscount - (discountPercentage * priceBeforeDiscount)).toFixed(2);
+    return priceAfterDiscount;
+}
+console.log(applyDiscount(100,.1));
+
+
+
+
+
+
+
 // function applyDiscount(price, discountPercent) {
 //     var discountPrice = price -(price * discountPercent);
 //     return discountPercent.toFixed(2);

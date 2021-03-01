@@ -146,7 +146,7 @@ var userTotalBill = Number(prompt("What is your bill total?"));
 alert("Your lucky number was " + luckyNumber);
 
 //price before the discount
-alert("Your price before discount was $" + userTotalBill + " ,but with the discount you will only pay $" + );
+alert("Your price before discount was $" + userTotalBill + " ,but with the discount you will only pay $");
 
 alert(calculateTotal(luckyNumber,userTotalBill));
 
