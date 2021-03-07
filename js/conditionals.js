@@ -82,7 +82,7 @@ console.log(analyzeColor(verifyColor));
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-var userColor = prompt("Please enter another color.")
+var userColor = prompt("Please enter a color.")
 
 // console.log(analyzeColor(alert("You entered " + userColor))); // previously written code
 alert(analyzeColor(userColor));
@@ -109,6 +109,7 @@ alert(analyzeColor(userColor));
  */
 
 function calculateTotal(luckyN,totalAmount){
+    var discount;
 
     if (luckyN === 0){
         return totalAmount
@@ -142,11 +143,12 @@ var luckyNumber = Math.floor(Math.random() * 6);
 //the user will enter their total bill
 var userTotalBill = Number(prompt("What is your bill total?"));
 
+var discountedTotal = (calculateTotal(luckyNumber, userTotalBill));
 //the user's lucky number
 alert("Your lucky number was " + luckyNumber);
 
 //price before the discount
-alert("Your price before discount was $" + userTotalBill + " ,but with the discount you will only pay $");
+alert("Your price before discount was $" + userTotalBill + " ,but with the discount you will only pay $" + discountedTotal);
 
 alert(calculateTotal(luckyNumber,userTotalBill));
 
@@ -167,6 +169,14 @@ alert(calculateTotal(luckyNumber,userTotalBill));
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+function isEven(num){
+    return num % 2 === 0;
+}
+
+function isPositive(num){
+    return num > 0;
+}
+
 var userConfirmed = confirm("Would you like to enter a number?");
 
 if (userConfirmed) {
@@ -182,5 +192,5 @@ if (userConfirmed) {
 
     var numberPosOrNeg = (usersNumber > 0) ? "positive" : "negative";
 }else{
-
+    alert("Hey that is not a number!");
 }

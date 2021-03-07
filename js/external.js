@@ -47,16 +47,25 @@ else {
 }
 
 // The code below determines whether the user may use an offer based on questions answered
-var purchasedItems = confirm("Will you purchase more than two items?");
+// var purchasedItems = confirm("Will you purchase more than two items?");
+// var isPremiumMember = confirm("Are you a premium member?");
+// var offerValid = confirm("Is offer valid?")
+//
+// if (((purchasedItems === true) || (isPremiumMember === true)) && (offerValid === true));
+//
+//
+//
+//     alert("You have a discount applied!")
+// if
+//     (((purchasedItems === false) || (isPremiumMember === false) && (offerValid === false)));
+//     alert("Sorry, a discount may not be applied at this time.")
+
+var isOfferValid = confirm("Is the offer still valid?");
+
+var hasMoreThanTwoItems = parseInt(prompt("How many items do you have in your cart?")) >= 2;
+
 var isPremiumMember = confirm("Are you a premium member?");
-var offerValid = confirm("Is offer valid?")
 
-if (((purchasedItems === true) || (isPremiumMember === true)) && (offerValid === true));
+var canUserUseOffer = (hasMoreThanTwoItems || isPremiumMember) && isOfferValid;
 
-
-
-    alert("You have a discount applied!")
-if
-    (((purchasedItems === false) || (isPremiumMember === false) && (offerValid === false)));
-    alert("Sorry, a discount may not be applied at this time.")
-
+alert("You can use this offer is a " + canUserUseOffer + " statement.");

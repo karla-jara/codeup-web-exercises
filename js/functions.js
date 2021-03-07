@@ -25,19 +25,16 @@ console.log(sayHello("Codeup"))
  * console.log 'helloMessage' to check your work
  */
 
-var helloMessage = "Karla Jara";
+var helloMessage = (sayHello("Karla"));
 
-console.log(sayHello(helloMessage));
+console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-function sayHello2 (name) {
-    return "You look " + name + "!";
-}
-console.log(sayHello2("amazing"));
+
 
 var myName = "Karla J";
 console.log(sayHello(myName));
