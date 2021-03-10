@@ -1,6 +1,16 @@
+* {
+    align-content: center;
+}
+
 .fancy-header {
-    color: #c3621d; /* single line comment */
+    color: #0c67b0; /* single line comment */
+    margin-bottom: 10px;
     text-decoration: underline;
+}
+
+.under-title {
+    color: #0c67b0;
+    text-align: center;
 }
 
 h1 {
@@ -8,12 +18,10 @@ h1 {
 }
 
 body {
-    background-color: #f3ebe4;
-
+    background-color: #cceeff;
+    background-image: url("tech-5142625_1920.jpg");
 }
 
-body {
-}
 
 company vision {
     /*background-image: url("img/tech-5142625_1920.jpg");*/
