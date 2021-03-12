@@ -1,15 +1,16 @@
 * {
     align-content: center;
+    color: #3ec620;
 }
 
 .fancy-header {
-    color: #0c67b0; /* single line comment */
+    color: #1194d0; /* single line comment */
     margin-bottom: 10px;
-    text-decoration: underline;
+    text-decoration: underline #b2c3e3;
 }
 
 .under-title {
-    color: #0c67b0;
+    color: #3693cf;
     text-align: center;
 }
 
@@ -18,11 +19,27 @@ h1 {
 }
 
 body {
-    background-color: #cceeff;
-    background-image: url("tech-5142625_1920.jpg");
+    background-color: #374737;
+    background-image: inherit;
 }
 
+#company-vision.boardwalk {
+    margin: 5px;
+}
 
-company vision {
+#pricing {
+    border: 1px solid #3ec620;
+    margin: 2px 2px;
+    padding: 2px;
+}
+
+td, th {
+    color: #3ec620;
+    border: 1px solid #3ec620;
+    padding: 2px;
+}
+
+a:hover {
+    color: #fff;
     /*background-image: url("img/tech-5142625_1920.jpg");*/
 }
