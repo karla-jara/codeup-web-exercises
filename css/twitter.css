@@ -21,8 +21,8 @@ header {
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
-    /*clear: both;*/
 }
+
 a {
     color: var(--link-color);
 }
@@ -55,7 +55,7 @@ a {
 .profile {
     background: var(--light-bg);
     height: 80px;
-    /*position: relative;*/
+    position: relative;
 }
 .profile-image {
     position: absolute;
@@ -65,7 +65,7 @@ a {
 
 .profile-form {
     float: right;
-    line-height: 1px;
+    line-height: 80px;
 }
 
 .profile-details {
