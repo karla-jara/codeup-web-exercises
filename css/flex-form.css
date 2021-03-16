@@ -35,9 +35,10 @@ body {
     border: 20px solid rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     display: flex;
-    width: 80vw;
+    width: 80%;
     margin: auto;
-    background: white;
+    background-color: white;
+
 
 
     /* TODO: Add an automatic margin and a flex container to this selector */
@@ -46,7 +47,7 @@ body {
 .flex-form > * {
     border: 0;
     padding: 10px;
-    background: white;
+    /*background: white;*/
     line-height: 50px;
     font-size: 20px;
     border-radius: 0;
@@ -62,9 +63,6 @@ body {
     border-bottom: 1px solid #b4d455;
     color: white;
     margin-left: auto;
-
-
-
 }
 
 .destination {
