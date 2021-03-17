@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
+    text-decoration: none;
 }
+
 body {
     margin: 0;
     color: black;
 }
-section {
+
+header {
     background-color: #c1c1c1;
     color: #000;
     display: flex;
@@ -14,61 +17,54 @@ section {
     font-family: 'Work Sans', sans-serif;
 }
 
-
-.flex-item>a {
+a {
     display: inline-block;
-    text-underline: none;
     color: black;
-    text-decoration: none;
-    padding: 24px;
-    /*height: 56px;*/
-    /*line-height: 56px;*/
+    padding: 9px;
 }
+
+/*.logo a {*/
+/*    padding: 3px 12px;*/
+/*}*/
 
 a:hover {
     color: blue;
-
 }
 
-
-.nav {
+.header-content {
     display: flex;
     align-items: center;
 }
 
-.flex-container {
+.list-on-left {
     display: flex;
-
-
     margin-right: auto;
-
+    text-decoration: none;
+    width: 15em;
+    justify-content: flex-start;
 }
 
-.flex-container>.flex-item{
+/*.header-content .list-on-left>.list-item {*/
+/*    margin-right: auto;*/
+/*}*/
 
-    /*padding: 9px;*/
-
-}
-
-.icons {
+.list-on-right {
     display: flex;
     margin-left: auto;
-
+    justify-content: flex-end;
+    text-decoration: none;
+    list-style: none;
+    width: 15em;
 }
 
-.icons>.icon-item {
-    /*align-items: center;*/
-    padding: 9px;
-
-
-
-}
-
-.title {
+.logo{
     display: flex;
     padding: .2em;
     font-size: 3em;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
-
+    text-decoration: none;
+    margin: 0 auto;
+    border-right: 10em;
+    width: calc(100% - 30em);
 }
