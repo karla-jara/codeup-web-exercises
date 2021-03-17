@@ -19,6 +19,8 @@ a {
 .container {
     max-width: 750px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
     /* TODO: Make this a flex container and align it's items to the center*/
 }
 
@@ -26,8 +28,11 @@ a {
     background: rgba(255, 255, 255, 0.2);
     margin: 20px;
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 4px ;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-basis:100%;
     /*  TODO: Change this flex items basis to 100% of the page  */
 }
 
@@ -65,4 +70,5 @@ a {
     padding: 10px;
     color: white;
     border-radius: 4px;
+    margin-bottom: 5px;
 }
