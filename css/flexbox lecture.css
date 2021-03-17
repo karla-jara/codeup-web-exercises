@@ -1,8 +1,5 @@
-body {
-    margin: 0;
-    font-family: Roboto;
-    background: orange;
-}
+
+
 h1, h2, h3 {
     padding: 0;
     margin: 0;
@@ -15,12 +12,35 @@ hr {
     border-top: 1px solid whitesmoke;
     width: 90px;
 }
+
+.boundary {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    /*width: 50vw;*/
+    border-top: 1px solid black;
+    padding-top: 2em;
+    background-color: cadetblue;
+    height: 100vh;
+}
+
+.padding-boundary {
+    background-color: #374737;
+    padding: 0 6em 0 6em;
+
+}
 .card {
     margin: .5em;
     border-radius: 2px;
     background: white;
     width: 250px;
     height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    background: #3B94D9;
 }
 img {
     border-radius: 120px;
@@ -33,6 +53,12 @@ i {
     position: relative;
     bottom: 1.5em;
 }
+.icons {
+    display: flex;
+    width: 54%;
+    justify-content: space-evenly;
+}
 .icons i {
     font-size: 2.2em;
+
 }
