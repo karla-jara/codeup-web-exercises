@@ -68,3 +68,7 @@ a:hover {
     border-right: 10em;
     width: calc(100% - 30em);
 }
+
+p {
+    text-align: center;
+}
