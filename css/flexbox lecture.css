@@ -152,6 +152,48 @@ nav div {
 
 
 
+
+
+}
+
+@media screen and (min-width: 576px) {
+    nav div:nth-child(3), nav div:nth-child(4) {
+        display: inline-block;
+    }
+
+    nav div {
+        flex-grow: 1;
+    }
+
+    img {
+        display: inline-block;
+        width: 25%;
+        border-radius: 120px;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .padding-boundary {
+        padding: 0 7em 0 7em;
+    }
+
+    .icons {
+        flex-direction: row;
+        width: 30%;
+        justify-content: space-between;
+    }
+
+    h2, h3 {
+        font-size: revert;
+    }
+
+    .card {
+        height: 33vh;
+        width: 33vw;
+    }
 }
 
 
@@ -231,4 +273,3 @@ nav div {
 /*    selector {*/
 /*        property: value;*/
 /*    }*/
-}
