@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    margin: 1em;
+}
+
+.alert-info a {
+    background-color: #beffff;
+    width: 100%;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid grey;
+}
+
+h1 {
+    margin: .2em auto .5em auto;
+    font-size: 3em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    background-color: lightgray;
+    display: flex;
+    height: 3.5em;
+    width: 100%;
+    margin-bottom: .7em;
+}
+
+.nav-links {
+    margin: auto;
+}
+
+.header-img {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+.sub-section h2 {
+    font-size: 1.25em;
+}
+
+.sub-section {
+    font-style: italic;
+}
+
+footer {
+    margin-top: 4em;
+}
+
+@media screen and (min-width: 768px){
+    body {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .hidden-on-desktop {
+        display: none;
+    }
+    h1 {
+        margin: .2em auto .5em 0;
+        font-size: 2.5em;
+    }
+    .nav-links {
+        flex-direction: row;
+    }
+    .nav-links li {
+        background: none;
+        margin: 0 .75em;
+    }
+    section p {
+        padding-right: 1em;
+    }
+    .main-section {
+        flex-basis: 60%;
+    }
+    .sub-section {
+        flex-basis: 40%;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/** {*/
+/*    box-sizing: border-box;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    font-family: 'Ubuntu', sans-serif;*/
+/*}*/
+
+/*.alert-info {*/
+/*    display: flex;*/
+/*    flex-flow: nowrap;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    height: 3em;*/
+/*    width: 339px;*/
+/*    border: 2px solid #d8d8d8;*/
+/*    background-color: #ccffff;*/
+/*    margin: 6px auto;*/
+/*}*/
+
+/*.alert-info a {*/
+/*    display: inline-block;*/
+/*    text-decoration: none;*/
+/*    padding: 1vh 6vw;*/
+/*    color: black;*/
+/*    font-size: 18px;*/
+/*    font-family: "PT Sans";*/
+
+/*}*/
+
+/*.alert-info a:hover {*/
+/*    color: #0ab4ff;*/
+/*}*/
+
+/*h1 {*/
+/*    text-align: center;*/
+/*    font-size: 3em;*/
+/*    margin: 7px 0 20px 0;*/
+/*    font-family: sans-serif;*/
+/*}*/
+
+/*.nav-links {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin: auto;*/
+/*}*/
+
+/*ul.nav-links li {*/
+/*    display: flex;*/
+/*    !*flex-flow: row wrap;*!*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    !*justify-items: ;*!*/
+/*    margin: .5em;*/
+/*    height: 3em;*/
+/*    width: 339px;*/
+/*    background-color: #d8d8d8;*/
+
+/*}*/
+
+/*.header-img #img1 {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    margin: 1em auto;*/
+/*}*/
+
+/*.header-img #img2 {*/
+/*    display: none;*/
+/*}*/
+
+
+/*.main {*/
+/*    display: block;*/
+/*    justify-content: center;*/
+/*    width: 339px;*/
+/*    margin: 2em auto;*/
+
+/*}*/
+
+/*.sub-section {*/
+/*    display: block;*/
+/*    justify-content: center;*/
+/*    width: 339px;*/
+/*    margin: 3em auto;*/
+/*    font-style: italic;*/
+/*}*/
+/*footer {*/
+/*    display: flex;*/
+/*    width: 339px;*/
+/*    justify-content: center;*/
+/*    margin: 1em auto;*/
+/*}*/
+
+/*footer p {*/
+/*    margin-right: auto;*/
+
+/*}*/
+
+/*footer #social-media-links>a {*/
+/*    padding: 0 3px;*/
+
+
+/*}*/
+
+/*@media screen and (min-width: 768px) {*/
+
+/*    .alert-info {*/
+/*        display: none;*/
+/*    }*/
+/*    h1 {*/
+/*        text-align: left;*/
+/*        margin-left: 20vw;*/
+/*        display: block;*/
+/*        margin-right: 10vw;*/
+/*        width: 330px;*/
+/*    }*/
+/*    ul .nav-links {*/
+/*        display: flex;*/
+
+/*        !*flex-direction: row;*!*/
+/*        !*margin-left: auto;*!*/
+/*    }*/
+/*    .header-img #img1 {*/
+/*        display: none;*/
+/*    }*/
+/*    .header-img #img2 {*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        margin: auto;*/
+/*    }*/
+
+/*}*/
