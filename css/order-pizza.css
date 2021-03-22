@@ -1,32 +1,23 @@
-/** {*/
-/*    box-sizing: border-box;*/
-/*    text-decoration: none;*/
-/*}*/
-/*!* Selector properties for navigation bar*!*/
-/*.nav-item {*/
-/*    display: flex;*/
-/*}*/
-/*.navbar-brand {*/
-/*    margin-left: 1em;*/
-
-/*}*/
-/*.navbar-toggler{*/
-/*    display: flex;*/
-/*    margin-left: auto;*/
-/*}*/
+/*Navigation Bar*/
 .nav-signup a {
     color: #777777;
 }
-/*.form-inline {*/
-/*    margin-left: .75em;*/
-/*    color: #ced4db;*/
-/*}*/
 .navbar a:hover {
     background: #e7e7e7;
+    height: 100%;
 }
 
-/*!* Selector properties nav-tabs*!*/
-/*.build-pizza {*/
-/*    margin-left: 5vw;*/
-
-/*}*/
+.navbar {
+    padding: 0;
+}
+/*Build your own pizza cards*/
+.build-container {
+    display: block;
+    margin: 2rem;
+}
+.card-header {
+    border: 1px solid rgba(222,223,223,0.35);
+}
+.card-footer {
+    border: 1px solid rgba(222,223,223,0.35);
+}
