@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* Selector properties for navigation bar*/
+.nav-item {
+    display: flex;
+}
+.navbar-brand {
+    margin-left: 1em;
+
+}
+.navbar-toggler{
+    display: flex;
+    margin-left: auto;
+}
+.nav-signup a {
+    color: #777777;
+}
+.form-inline {
+    margin-left: .75em;
+    color: #ced4db;
+}
+.navbar a:hover {
+    padding: .3em;
+    background: #e7e7e7;
+}
+/* Selector properties nav-tabs*/
+.build-pizza {
+    margin-left: 5vw;
+
+}
