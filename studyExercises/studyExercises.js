@@ -5,12 +5,15 @@
 // false
 // true
 
-function (input) {
+function is_array (input) {
 
-    if (typeof input === 'array')
-
-
+    if (input === []) {
+        return true
+    }
 }
+console.log(is_array('w3resource'));
+console.log(is_array([1, 2, 4, 0]));
+
 
 // 2. Write a JavaScript function to clone an array. Go to the editor
 // Test Data :
