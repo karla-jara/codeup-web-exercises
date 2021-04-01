@@ -6,6 +6,11 @@
 </head>
 <body>
 
+<button id="btn1">If Javascript is cool, click me!</button>
+<button id="btn2">Click Me!</button>
+<button id="btn3">Click Me!</button>
+<button id="btn4">Click Me!</button>
+
 <h1 id="main-header">Hello World!</h1>
 <ul>
     <li data-dbid="1">Item 1</li>
@@ -32,7 +37,7 @@
         var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "Javascript is Cool"
+        // mainHeader.innerHTML = "Javascript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
@@ -58,6 +63,14 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerHTML = "Mission Accomplished!";
+
+
+        // btn1 changes title
+        var btn1 = document.getElementById('btn1')
+        var listener = function (event) {
+            mainHeader.innerHTML = "Javascript is Cool!";
+        }
+        btn1.addEventListener('click', listener);
 
     })();
 </script>
