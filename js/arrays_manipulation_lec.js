@@ -219,3 +219,10 @@
 // // replace elements
 //     bonds.splice(bonds.indexOf("Craig"), 1, "Elba");
 //     console.log(bonds);
+var fruitsSalad = ["apple", "pear", "grapes"];
+
+function fruitSalad(arr) {
+    return alert(arr.flatMap(f => [f.slice(0, f.length / 2), f.slice(f.length / 2)]).sort().join(""));
+}
+
+console.log(fruitsSalad);
