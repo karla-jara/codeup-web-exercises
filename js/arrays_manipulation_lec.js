@@ -427,3 +427,167 @@ function evenOrOdd(arr) {
         return 'odd'
     }
 }
+
+//According to the lodash documentation, _.drop creates a slice of an array with n elements dropped from the beginning.
+//
+// Your challenge is to write your own version using vanilla JavaScript.
+//
+// Examples
+// drop([1, 2, 3], 1) ➞ [2, 3]
+//
+// drop([1, 2, 3], 2) ➞ [3]
+//
+// drop([1, 2, 3], 5) ➞ []
+//
+// drop([1, 2, 3], 0) ➞ [1, 2, 3]
+
+function drop(arr, val = 1) {
+    return arr.slice(val);
+}
+
+//Write a function to reverse an array.
+//
+// Examples
+// reverse([1, 2, 3, 4]) ➞ [4, 3, 2, 1]
+//
+// reverse([9, 9, 2, 3, 4]) ➞ [4, 3, 2, 9, 9]
+//
+// reverse([]) ➞ []
+
+function reverse(arr) {
+    return arr.reverse();
+}
+
+//Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes.
+//
+// Examples
+// getVoteCount({ upvotes: 13, downvotes: 0 }) ➞ 13
+//
+// getVoteCount({ upvotes: 2, downvotes: 33 }) ➞ -31
+//
+// getVoteCount({ upvotes: 132, downvotes: 132 }) ➞ 0
+
+function getVoteCount(votes) {
+    return votes.upvotes - votes.downvotes;
+}
+
+//Given a number, return an array containing the two halves of the number. If the number is odd, make the rightmost number higher.
+//
+// Examples
+// numberSplit(4) ➞ [2, 2]
+//
+// numberSplit(10) ➞ [5, 5]
+//
+// numberSplit(11) ➞ [5, 6]
+//
+// numberSplit(-9) ➞ [-5, -4]
+
+function numberSplit(n) {
+    return [Math.floor(n/2), Math.ceil(n/2)]
+}
+
+//Create a function that takes a string of name and checks how much good is the given name. A preloaded dictionary of alphabet scores is available in the Code tab. Add up the letters of your name to get the total score.
+//
+const scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,
+"H": 10, "I": 200, "J": 100, "K": 114, "L": 100, "M": 25,
+"N": 450, "O": 80, "P": 2, "Q": 12, "R": 400, "S": 113,
+"T": 405, "U": 11, "V": 10, "W": 10, "X": 3, "Y": 210, "Z": 23}
+// Return your result as per the following rules:
+//
+// score <= 60:   "NOT TOO GOOD"
+//
+// 61 <= score <= 300:  "PRETTY GOOD"
+//
+// 301 <= score <= 599:  "VERY GOOD"
+//
+// score >= 600:  "THE BEST"
+// Examples
+// nameScore("MUBASHIR") ➞ "THE BEST"
+//
+// nameScore("YOU") ➞ "VERY GOOD"
+//
+// nameScore("MATT") ➞ "THE BEST"
+//
+// nameScore("PUBG") ➞ "NOT TOO GOOD"
+
+function nameScore(name) {
+    let score = 0;
+    for (let i = 0 ;i < name.length ;i++) {
+        if (name[i] in scores) {
+            score += scores[name[i]];
+        }
+    }
+    if (score <= 60) {
+        return "NOT TOO GOOD"
+    } else if (score <= 300 && score >= 61) {
+        return "PRETTY GOOD"
+    } else if (score >= 301 && score <= 599) {
+        return "VERY GOOD";
+    } else {
+        return "THE BEST"
+    }
+}
+
+console.log(nameScore("karla"))
+
+
+
+//Filter out Strings from an Array
+// Create a function that takes an array of non-negative integers and strings and return a new array without the strings.
+//
+// Examples
+// filterArray([1, 2, "a", "b"]) ➞ [1, 2]
+//
+// filterArray([1, "a", "b", 0, 15]) ➞ [1, 0, 15]
+//
+// filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
+
+function filterArray(arr) {
+    return arr.filter(n => typeof n === 'number');
+}
+
+
+//Create a function that splits a string into an array of identical clusters.
+//
+// Examples
+// splitGroups("555") ➞ ["555"]
+//
+// splitGroups("5556667788") ➞ ["555", "666", "77", "88"]
+//
+// splitGroups("aaabbbaabbab") ➞ ["aaa", "bbb", "aa", "bb", "a", "b"]
+//
+// splitGroups("abbbcc88999&&!!!_") ➞ ["a", "bbb", "cc", "88", "999", "&&", "!!!", "_"]
+
+function splitGroups(str) {
+    let arr = [], s = str[0];
+    for (var i = 1; i < str.length; i++) {
+        if (str[i] !== str[i-1]) {
+            arr.push(s)
+            s = str[i];
+        } else {
+            s+= str[i]
+        }
+    }
+    arr.push(s);
+    return arr;
+}
+
+//Create a function which returns the number of true values there are in an array.
+//
+// Examples
+// countTrue([true, false, false, true, false]) ➞ 2
+//
+// countTrue([false, false, false, false]) ➞ 0
+//
+// countTrue([]) ➞ 0
+
+function countTrue(arr){
+    var count = 0;
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] === true){
+            count++;
+        }
+    }
+    return count;
+}
+
