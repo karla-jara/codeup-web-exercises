@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--<script src="js/jquery.js"></script>-->
+<script>
+    "use strict";
+    var konamiCodeKey = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+        var konamiCodeEntered = [];
+
+        konamiCodeEntered.push(event.keyCode);
+        console.log(konamiCodeEntered);
+
+        if (konamiCodeEntered === konamiCodeKey){
+            alert('You have added 30 lives!')
+        }
+
+
+    });
+
+
+</script>
+</body>
+</html>
