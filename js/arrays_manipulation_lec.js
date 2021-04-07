@@ -591,3 +591,92 @@ function countTrue(arr){
     return count;
 }
 
+//Create a function that returns an array of all the integers between two given numbers start and end.
+//
+// Examples
+// rangeOfNum(2, 4) ➞ [3]
+//
+// rangeOfNum(5, 9) ➞ [6, 7, 8]
+//
+// rangeOfNum(2, 11) ➞ [3, 4, 5, 6, 7, 8, 9, 10]
+
+function rangeOfNum (start, end){
+    var middle = [];
+    if (start == end) return middle;
+
+    for (var i = start+1; i < end; i++){
+        middle.push(i);
+    }
+    return middle;
+}
+
+//Write a function that connects each previous word to the next word by the shared letters. Return the resulting string (removing duplicate characters in the overlap) and the minimum number of shared letters across all pairs of strings.
+//
+// Examples
+// join(["oven", "envier", "erase", "serious"]) ➞ ["ovenvieraserious", 2]
+//
+// join(["move", "over", "very"]) ➞ ["movery", 3]
+//
+// join(["to", "ops", "psy", "syllable"]) ➞ ["topsyllable", 1]
+//
+// // "to" and "ops" share "o" (1)
+// // "ops" and "psy" share "ps" (2)
+// // "psy" and "syllable" share "sy" (2)
+// // the minimum overlap is 1
+//
+// join(["aaa", "bbb", "ccc", "ddd"]) ➞ ["aaabbbcccddd", 0]
+
+function overlap (arr){
+const join = arr => {
+var  minOverlap = arr[0].length;
+    for( let i = 1; i < arr.length; i++){
+        let shiftAmount = arr[0].length - arr[0].lastIndexOf(arr[i][0]);
+
+        if(shiftAmount >= arr[0].length){
+            arr[0] += arr[i];
+            shiftAmount = 0;
+        }
+        else{
+            arr[0] += arr[i].slice(shiftAmount);
+        }
+
+        if(shiftAmount < minOverlap)
+            minOverlap = shiftAmount;
+    }
+    return [arr[0], minOverlap];
+}
+}
+
+//Convert All Array Items to String
+// Create a function that takes an array of integers and strings. Convert integers to strings and return the new array.
+//
+// Examples
+// parseArray([1, 2, "a", "b"]) ➞ ["1", "2", "a", "b"]
+//
+// parseArray(["abc", 123, "def", 456]) ➞ ["abc", "123", "def", "456"]
+//
+// parseArray([1, 2, 3, 17, 24, 3, "a", "123b"]) ➞ ["1", "2", "3", "17", "24", "3", "a", "123b"]
+//
+// parseArray([]) ➞ []
+
+function parseArray(arr) {
+    if (arr.length === 0) {
+        return arr;
+    } else {
+        return arr.join().split(',')
+    }
+}
+
+//Create a function that takes a multidimensional array and return the total count of numbers in that array.
+//
+// Examples
+// countNumber([["", 17.2, 5, "edabit"]]) ➞ 2
+// // 17.2 and 5.
+//
+// countNumber([[[[[2, 14]]], 2, 3, 4]]) ➞ 5
+// // 2, 14, 2, 3 and 4.
+//
+// countNumber([["balkot"]]) ➞ 0
+
+const countNumber = arr =>
+    arr.flat(Infinity).filter(x => typeof x === 'number').length
