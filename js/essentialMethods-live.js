@@ -75,6 +75,7 @@ $("nav").removeClass('bg-dark', 'navbar-dark')
 console.log('nav');
 
 //TODO: Add the class of navbar-light and bg-info from the <nav> with jQuery.
+$('nav').addClass('navbar-light', 'bg-info')
 
 //TODO: Finally, create the following - add your own button somewhere on the navbar. Add an event that will toggle the navbar between bg-dark/navbar-dark and bg-info/navbar-light respectively
 
@@ -82,22 +83,31 @@ console.log('nav');
 
 
 
+
 //traversing
 
 //.each() - iterate over each matched element to do some stuff
-//TODO: Let's change the last two lis of the class .hat-sold to "Baseball hats" as well
-
+//TODO: Let's change the last two lis of the class .hat-sold to "Fedora hats" as well
+$('.hat-sold').each(function (index, ele){//iterate over matched items
+    if (index !== 0){
+        $(ele).html('Fedora hats');
+    }
+})
 //.first()
-//TODO: Let's change the first list item in the class of .hat-sold from "Baseball hats" to "Porkpie hats"
+//TODO: Let's change the first list item in the class of .hat-sold from "Fedora hats" to "Porkpie hats"
+
+$('.hat-sold').first().html('Porkpie hats');
 
 //.last()
-//TODO Together: Let's change the last li in the class of .hat-sold to be Fancy hats - italicized! ! !
-
+//TODO Together: Let's change the last li in the class of
+// .hat-sold to be Fancy hats - italicized! ! !
+$('.hat-sold').last().html('<em>Fancy hats</em>');//this is a method chain
 //.parent()
 //TODO: Let's pop up the tree to the parent (<ol>) and use .css to change the list-style-type
-
+$('.hat-sold').parent().css('list-style-type', 'upper-roman')
 //.children()
 //TODO Together: What ID would I need to target to see all of the HTML, as children, that we've been manipulating so far?
-
+console.log($('#best-seller-cont').children());
 //.next()
 //TODO: Let's slide across branches (sibling to sibling) on our tree and change the HTML within the ordered list we find there to only show Top Hats! !
+$('.best-seller-header').next().html('<li>Top Hats</li><li>Top Hats</li><li>Top Hats</li>')
