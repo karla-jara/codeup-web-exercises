@@ -30,5 +30,26 @@
             "tool"
         ],
         "price": 10
+    }, {
+        "title": "Edger",
+        "quantity": 15,
+        "categories": [
+            "tool", "outdoor", "electric"
+        ],
+        "price": 30
+    }, {
+        "title": "Saw",
+        "quantity": 21,
+        "categories": [
+            "tool", "electric", "cordless"
+        ],
+        "price": 39
+    }, {
+        "title": "Nails",
+        "quantity": 750,
+        "categories": [
+            "hardware", "building"
+        ],
+        "price": 3
     }
 ]
