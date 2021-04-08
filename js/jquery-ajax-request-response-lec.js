@@ -15,6 +15,8 @@ $(document).ready(function(){
      * endpoint, then query it for a username...
      */
 
+    var hookBinUrl = "https://hookb.in/E7g0kJLVB8FDEEaxnlyJ"
+
 
     /*
      * TO DO TOGETHER: For this next one, we'll send over some data. Add the
@@ -38,6 +40,17 @@ $(document).ready(function(){
      * API and get data back. Uncomment the line below.
      */
 
+    var swapiBaseURL = "https://swapi.dev/api/";
+
+    $.ajax(swapiBaseURL + "people", {
+        method: "GET",
+        data: {
+            search: "r2"
+        }
+    } ).done(function (data){
+        console.log(data);
+    });
+
 
 
     /*
@@ -45,7 +58,11 @@ $(document).ready(function(){
      * return a list of all Star Wars films.
      */
 
-
+    $.ajax(swapiBaseURL + "films/").done(function (data){
+        console.log(data);
+    }).fail(function (jqXHR, status){
+        console.log("failed to get films");
+    });
 
 
     /*
