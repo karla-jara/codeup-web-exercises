@@ -51,5 +51,12 @@
             "hardware", "building"
         ],
         "price": 3
-    }
+    }, {
+    "title": "Rotary tool",
+    "quantity": 150,
+    "categories": [
+        "hardware", "building"
+    ],
+        "price": 30
+}
 ]
