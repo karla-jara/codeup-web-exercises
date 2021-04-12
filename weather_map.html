@@ -11,11 +11,12 @@
 
     <!-- Custom CSS -->
 
-    <title></title>
+    <title>Weather Map Project</title>
 </head>
 <body>
 
-<h1>Weather Map Project</h1>
+<h1>San Antonio Weather</h1>
+
 
 
 <h5>Tips</h5>
@@ -29,7 +30,7 @@
     <li>To add mapbox autocomplete search, you will need to include geocoder scripts from mapbox</li>
 </ul>
 
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- -------------jQuery first, then Popper.js, then Bootstrap---------- JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
@@ -40,74 +41,19 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
-
 <script>
-    $(document).ready(function () {
 
-        "use strict";
+                  <!-- ---------San Antonio weather request------------ -->
 
-
-        // GET REQUEST to OpenWeatherMap using city parameter
-        // https://openweathermap.org/current
-
-        $.get("https://api.openweathermap.org/data/2.5/weather", {
-            q: "San Antonio, US",
-            appid: OPEN_WEATHER_APPID,
-            units: "imperial"
-        }).done(function (results){
-            console.log(results);
-        });
-
-
-        // TODO: How can we get imperial units instead?
-
-        // TODO: What are some additional ways we can get the weather from this API?
-        //
-        // $.get("https://api.openweathermap.org/data/2.5/weather", {
-        //     appid: OPEN_WEATHER_APPID,
-        //     lat: 29.423017,
-        //     lon: -98.48527,
-        //     units: "imperial",
-        //     exclude: "current,minutely,hourly,alerts"
-        // }).done(function (results){
-        //     console.log(results);
-        // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //TODO: How can we incorporate mapbox with this? How can we make it dynamic?
-
-        // TODO: Explore the docs... what endpoint can we use to get a forecast?
-
-        // TODO: What parameter can we include in order to get the daily forecast only
-
-        $.get("https://api.openweathermap.org/data/2.5/onecall", {
-            appid: OPEN_WEATHER_APPID,
-            lat: 29.423017,
-            lon: -98.48527,
-            units: "imperial"
-        }).done(function (results){
-            console.log(results);
-        })
-
-
-
+    $.get("https://api.openweathermap.org/data/2.5/weather", {
+        q: "San Antonio, US",
+        appid: OPEN_WEATHER_APPID,
+        units: "imperial"
+    }).done(function (results){
+        console.log(results);
     });
-
-
 </script>
+
+
 </body>
 </html>
