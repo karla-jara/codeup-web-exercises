@@ -14,8 +14,66 @@
     <title>Weather Map Project</title>
 </head>
 <body>
-
-<h1>San Antonio Weather</h1>
+    <!-- Navbar Header -->
+    <nav class="navbar navbar-light bg-light align-content-center">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Weather App</span>
+            <span>Current City:</span>
+        </div>
+    </nav>
+    <div class="input-group mb-3">
+        <label type="text">Location</label>
+        <input type="text" class="form-control col-2" placeholder="Search by city" aria-label="Search by city" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Find</button>
+    </div>
+    <!-- 5 Day Forecast Cards -->
+    <div class="row justify-content-center">
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" id="monday">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" id="tuesday">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" id="wednesday">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" id="thursday">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" id="friday">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -43,15 +101,72 @@
 <script src="js/keys.js"></script>
 <script>
 
-                  <!-- ---------San Antonio weather request------------ -->
+   $.get("https://api.openweathermap.org/data/2.5/weather", {
+      q: "San Antonio, US",
+      appid: OPEN_WEATHER_APPID,
+      units: "imperial"
+   }).done(function (results){
+      console.log(results);
+   });
+                  <!-- Code for displaying daily content -->
+   $.get("https://api.openweathermap.org/data/2.5/onecall", {
+      lat: 29.42,
+       lon: -98.49,
+      appid: OPEN_WEATHER_APPID,
+      units: "imperial"
+   }).done(function (results){
+      console.log('5 day forecast', results);
+      $('#monday').html(results.daily[1].sunrise);
+      $('#monday').html(results.daily[1].sunrise);
+      $('#monday').html(results.daily[1].sunrise);
+   });
+   $.get("https://api.openweathermap.org/data/2.5/onecall", {
+       lat: 29.42,
+       lon: -98.49,
+       appid: OPEN_WEATHER_APPID,
+       units: "imperial"
+   }).done(function (results){
+       console.log('5 day forecast', results);
+       $('#tuesday').html(results.daily[2].sunrise);
+       $('#tuesday').html(results.daily[2].sunrise);
+       $('#tuesday').html(results.daily[2].sunrise);
+   });
+   $.get("https://api.openweathermap.org/data/2.5/onecall", {
+       lat: 29.42,
+       lon: -98.49,
+       appid: OPEN_WEATHER_APPID,
+       units: "imperial"
+   }).done(function (results){
+       console.log('5 day forecast', results);
+       $('#wednesday').html(results.daily[3].sunrise);
+       $('#wednesday').html(results.daily[3].sunrise);
+       $('#wednesday').html(results.daily[3].sunrise);
+   });
+   $.get("https://api.openweathermap.org/data/2.5/onecall", {
+       lat: 29.42,
+       lon: -98.49,
+       appid: OPEN_WEATHER_APPID,
+       units: "imperial"
+   }).done(function (results){
+       console.log('5 day forecast', results);
+       $('#thursday').html(results.daily[4].sunrise);
+       $('#thursday').html(results.daily[4].sunrise);
+       $('#thursday').html(results.daily[4].sunrise);
+   });
+   $.get("https://api.openweathermap.org/data/2.5/onecall", {
+       lat: 29.42,
+       lon: -98.49,
+       appid: OPEN_WEATHER_APPID,
+       units: "imperial"
+   }).done(function (results){
+       console.log('5 day forecast', results);
+       $('#friday').html(results.daily[5].sunrise);
+       $('#friday').html(results.daily[5].sunrise);
+       $('#friday').html(results.daily[5].sunrise);
+   });
 
-    $.get("https://api.openweathermap.org/data/2.5/weather", {
-        q: "San Antonio, US",
-        appid: OPEN_WEATHER_APPID,
-        units: "imperial"
-    }).done(function (results){
-        console.log(results);
-    });
+
+
 </script>
 
 
