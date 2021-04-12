@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function (){
 
 //Remove your custom jQuery code from previous exercises.
@@ -8,18 +10,21 @@ $(document).ready(function (){
 //
 // Set all li text color to red when the mouse is hovering; reset to black when it is not.
 
+
+
     // on click changes h1 background to black
+
 
     $('h1').click(
         function(h1_e){
-            $(this).css('background-color', 'black');
+            $(this).css('background-color', 'coral');
     });
 
     //on double click changes paragraphs to 18px
 
     $('p').dblclick(
         function(p_e){
-            $(this).css('font-size', '18px');
+            $(this).css('font-size', '24px');
     });
 
     // on hover over changes font to red
@@ -27,11 +32,20 @@ $(document).ready(function (){
 
     $('li').hover(
         function(){
-            $(this).css('font-color', 'red');
+            $(this).css('color', 'red');
         },
         function (){
-            $(this).css('font-color', 'black');
+            $(this).css('color', 'black');
         });
+
+    // alert Important message
+
+    var contentImportant = $('#message').html();
+    alert(contentImportant);
+
+    //
+
+
 
 
 

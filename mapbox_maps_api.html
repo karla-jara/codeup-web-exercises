@@ -10,18 +10,148 @@
     <title>Mapbox Maps API</title>
 </head>
 <body>
+<h1>My First Map!</h1>
 
     <!-- ---------------------Mapbox CDN----------------------------- -->
 
-    <div id='map' style='width: 400px; height: 300px;'></div>
+    <div id='map' style='width: 600px; height: 600px;'></div>
+    <script src="js/mapbox-geocoder-utils.js"></script>
+    <script src = js/keys.js></script>
+
     <script>
-        mapboxgl.accessToken = 'pk.eyJ1Ijoia2phcjAwNyIsImEiOiJja25hanA2aDUwdG1pMnBwanMzc3pmdXRvIn0._ODIACB2uewooFzdWbinQg';
+
+        // Creates a map
+        mapboxgl.accessToken = mapToken;
         var map = new mapboxgl.Map({
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
-            center: [-74.5, 40], // starting position [lng, lat]
-            zoom: 9 // starting zoom
+            center: [-98.48717, 29.42302], // starting position [lng, lat]
+            zoom: 12 // starting zoom
         });
+        // // Create marker
+        // var marker = new mapboxgl.Marker()
+        //     .setLngLat([-98.48717, 29.42302])
+        //     .addTo(map);
+        //
+        // // Create Marker and Set options
+        // var marker = new mapboxgl.Marker({
+        //     color: "coral",
+        //     draggable: true
+        // }).setLngLat([-98.48717, 29.42302])
+        //     .addTo(map);
+        //
+        // // Create popup for marker
+        // var fritePopup = new mapboxgl.Popup()
+        //     .setHTML("<p>La Frite</p>")
+        //     .addTo(map)
+        //
+        // marker.setPopup(fritePopup)
+
+        // Create geocode
+        geocode("728 S. Alamo, San Antonio, TX 78205", mapToken).then(function(result) {
+            console.log(result);
+            // map.setCenter(result);
+            map.setZoom(9);
+
+            var marker = new mapboxgl.Marker({
+                color: "coral"
+            })
+            .setLngLat(result)
+            .addTo(map);
+
+            var fritePopup = new mapboxgl.Popup()
+            .setHTML("<p>La Frite, my top favorite!</p>")
+            // .addTo(map)
+
+            marker.setPopup(fritePopup)
+        });
+
+        // List of favorite restaurants
+
+        var favRestaurants = [
+            {
+                name: "John the Greek",
+                type: "Greek",
+                features: ["Baklava", " Gyros", " Soups"],
+            },
+            {
+                name: "Raisin Cane's",
+                type: "Fast Food",
+                features: ["Chicken strips", " Fries", " Arnold Palmer"]
+            },
+            {
+                name: "Blanco Cafe",
+                type: "Mexican",
+                features: ["Tacos", " Menudo", " Pastries"]
+            }
+        ];
+
+        favRestaurants.forEach(function(fav) {
+            favRestaurants[fav].features.forEach(function(feature) {
+                console.log(feature);
+            });
+        });
+
+            // john the greek marker info
+
+        geocode("16602 San Pedro Ave, San Antonio, TX 78232", mapToken).then(function(result) {
+            console.log(result);
+            map.setZoom(9);
+
+            var marker = new mapboxgl.Marker({
+                color: "coral"
+            })
+                .setLngLat(result)
+                .addTo(map);
+
+            var johnPopup = new mapboxgl.Popup()
+                .setHTML(favRestaurants[0].name + ":  " + favRestaurants[0].features)
+            marker.setPopup(johnPopup)
+        });
+
+
+            // raising cane's marker info
+
+        geocode("106 St Cloud, San Antonio, TX 78228", mapToken).then(function(result) {
+            console.log(result);
+            map.setZoom(9);
+
+            var marker = new mapboxgl.Marker({
+                color: "coral"
+            })
+                .setLngLat(result)
+                .addTo(map);
+
+            var canesPopup = new mapboxgl.Popup()
+                .setHTML(favRestaurants[1].name + ":  " + favRestaurants[1].features)
+            marker.setPopup(canesPopup)
+        });
+
+
+        // blanco cafe marker info
+
+        geocode("7934 Fredericksburg Rd, San Antonio, TX 78229", mapToken).then(function(result) {
+            console.log(result);
+            map.setZoom(9);
+
+            var marker = new mapboxgl.Marker({
+                color: "coral"
+            })
+                .setLngLat(result)
+                .addTo(map);
+
+            var blancoPopup = new mapboxgl.Popup()
+                .setHTML(favRestaurants[2].name + ":  " + favRestaurants[2].features)
+            marker.setPopup(blancoPopup)
+        });
+
+        console.log("My first favorite restuarant is " + favRestaurants[0].name + " and serves " + favRestaurants[0].type + " food. Favorite items are " + favRestaurants[0].features);
+        console.log("My second favorite restuarant is " + favRestaurants[1].name + " and serves " + favRestaurants[1].type + " food. Favorite items are " + favRestaurants[1].features);
+        console.log("My third favorite restuarant is " + favRestaurants[2].name + " and serves " + favRestaurants[2].type + " food. Favorite items are " + favRestaurants[2].features);
+
+
+
+
     </script>
 </body>
 </html>
