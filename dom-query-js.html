@@ -7,9 +7,9 @@
 <body>
 
 <button id="btn1">If Javascript is cool, click me!</button>
-<button id="btn2">Click Me!</button>
-<button id="btn3">Click Me!</button>
-<button id="btn4">Click Me!</button>
+<button id="btn2">Hello Again Title to RebeccaPurple? Then click me!</button>
+<button id="btn3">Every other list item to red and second one limegreen? Then click Me!</button>
+<button id="btn4">To change the paragraph content to Mission Complete, click me!</button>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -43,34 +43,57 @@
         var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        // subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
 
         // TODO: Set text color on every other list item to grey
-        for (var i = 0; i < listItems.length; i+=2) {
-
-            var listItems = document.getElementsByTagName('li');
-            listItems[i].style.color = 'grey'
-        }
+        // for (var i = 0; i < listItems.length; i+=2) {
+        //
+        //     var listItems = document.getElementsByTagName('li');
+        //     listItems[i].style.color = 'red'
+        // }
 
         // TODO: Set text color of li with dbid = 1 to blue
-        listItems[1].style.color = 'blue';
+        // listItems[1].style.color = 'limegreen';
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!";
+        // subParagraphs[0].innerHTML = "Mission Accomplished!";
 
 
         // btn1 changes title
         var btn1 = document.getElementById('btn1')
-        var listener = function (event) {
+        var listenBtn1 = function (event) {
             mainHeader.innerHTML = "Javascript is Cool!";
         }
-        btn1.addEventListener('click', listener);
+        btn1.addEventListener('click', listenBtn1);
+
+        // btn2 changes subheader(Hello Again.) color to rebeccapurple
+        var btn2 = document.getElementById('btn2')
+        var listenBtn2 = function (event){
+            subHeader.style.color ='rebeccapurple';
+        }
+        btn2.addEventListener('click', listenBtn2)
+
+        // btn3 changes every other item list font color to red
+        var btn3 = document.getElementById('btn3')
+        var listenBtn3 = function (event){
+            for(var i = 0; i<listItems.length; i+=2)
+                listItems[i].style.color = 'red'
+                listItems[1].style.color = 'limegreen'
+        }
+        btn3.addEventListener('click', listenBtn3)
+
+        // btn4 changes Lorem paragraph to Mission Complete!
+        var btn4 = document.getElementById('btn4')
+        var listenBtn4 = function (event){
+            subParagraphs[0].innerHTML = 'Mission Complete!'
+        }
+        btn4.addEventListener('click', listenBtn4)
 
     })();
 </script>

@@ -17,7 +17,7 @@
 <body>
 
     <div class="card" style="width: 18rem;">
-        <img src="SALR - Baggs Logo.pdf" class="card-img-top" alt="...">
+        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -35,6 +35,22 @@
     </script>
     </div>
 
+
+    <!-- The HTML element that serves as the Mapbox container -->
+    <div id='#map'></div>
+
+    <!-- Mapbox JS -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Custom JS -->
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoia2phcjAwNyIsImEiOiJja25hanA2aDUwdG1pMnBwanMzc3pmdXRvIn0._ODIACB2uewooFzdWbinQg';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v9',
+            zoom: 10,
+            center: [-98.4916, 29.4252]
+        });
 
 
 
