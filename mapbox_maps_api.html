@@ -10,7 +10,9 @@
     <title>Mapbox Maps API</title>
 </head>
 <body>
-<h1>My First Map!</h1>
+    <h1>My First Map!</h1>
+    <div id="mapbox"></div>
+
 
     <!-- ---------------------Mapbox CDN----------------------------- -->
 
@@ -50,7 +52,7 @@
         // Create geocode
         geocode("728 S. Alamo, San Antonio, TX 78205", mapToken).then(function(result) {
             console.log(result);
-            // map.setCenter(result);
+
             map.setZoom(9);
 
             var marker = new mapboxgl.Marker({
@@ -61,12 +63,12 @@
 
             var fritePopup = new mapboxgl.Popup()
             .setHTML("<p>La Frite, my top favorite!</p>")
-            // .addTo(map)
+
 
             marker.setPopup(fritePopup)
         });
 
-        // List of favorite restaurants
+
 
         var favRestaurants = [
             {
@@ -92,7 +94,7 @@
             });
         });
 
-            // john the greek marker info
+
 
         geocode("16602 San Pedro Ave, San Antonio, TX 78232", mapToken).then(function(result) {
             console.log(result);
@@ -110,7 +112,7 @@
         });
 
 
-            // raising cane's marker info
+
 
         geocode("106 St Cloud, San Antonio, TX 78228", mapToken).then(function(result) {
             console.log(result);
@@ -128,7 +130,7 @@
         });
 
 
-        // blanco cafe marker info
+
 
         geocode("7934 Fredericksburg Rd, San Antonio, TX 78229", mapToken).then(function(result) {
             console.log(result);
@@ -145,9 +147,9 @@
             marker.setPopup(blancoPopup)
         });
 
-        console.log("My first favorite restuarant is " + favRestaurants[0].name + " and serves " + favRestaurants[0].type + " food. Favorite items are " + favRestaurants[0].features);
-        console.log("My second favorite restuarant is " + favRestaurants[1].name + " and serves " + favRestaurants[1].type + " food. Favorite items are " + favRestaurants[1].features);
-        console.log("My third favorite restuarant is " + favRestaurants[2].name + " and serves " + favRestaurants[2].type + " food. Favorite items are " + favRestaurants[2].features);
+        // console.log("My first favorite restuarant is " + favRestaurants[0].name + " and serves " + favRestaurants[0].type + " food. Favorite items are " + favRestaurants[0].features);
+        // console.log("My second favorite restuarant is " + favRestaurants[1].name + " and serves " + favRestaurants[1].type + " food. Favorite items are " + favRestaurants[1].features);
+        // console.log("My third favorite restuarant is " + favRestaurants[2].name + " and serves " + favRestaurants[2].type + " food. Favorite items are " + favRestaurants[2].features);
 
 
 

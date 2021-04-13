@@ -32,7 +32,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title" id="monday">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text" id="monweather"></p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
@@ -117,8 +117,8 @@
    }).done(function (results){
       console.log('5 day forecast', results);
       $('#monday').html(results.daily[1].sunrise);
-      $('#monday').html(results.daily[1].sunrise);
-      $('#monday').html(results.daily[1].sunrise);
+      sunrise$('#monweather').html(results.daily[1].weather);
+      $('#monday').html(results.daily[1].temp);
    });
    $.get("https://api.openweathermap.org/data/2.5/onecall", {
        lat: 29.42,
@@ -128,8 +128,8 @@
    }).done(function (results){
        console.log('5 day forecast', results);
        $('#tuesday').html(results.daily[2].sunrise);
-       $('#tuesday').html(results.daily[2].sunrise);
-       $('#tuesday').html(results.daily[2].sunrise);
+       // $('#tuesday').html(results.daily[2].weather);
+       $('#tuesday').html(results.daily[2].temp);
    });
    $.get("https://api.openweathermap.org/data/2.5/onecall", {
        lat: 29.42,
@@ -139,8 +139,8 @@
    }).done(function (results){
        console.log('5 day forecast', results);
        $('#wednesday').html(results.daily[3].sunrise);
-       $('#wednesday').html(results.daily[3].sunrise);
-       $('#wednesday').html(results.daily[3].sunrise);
+       // $('#wednesday').html(results.daily[3].weather);
+       $('#wednesday').html(results.daily[3].temp);
    });
    $.get("https://api.openweathermap.org/data/2.5/onecall", {
        lat: 29.42,
@@ -150,8 +150,8 @@
    }).done(function (results){
        console.log('5 day forecast', results);
        $('#thursday').html(results.daily[4].sunrise);
-       $('#thursday').html(results.daily[4].sunrise);
-       $('#thursday').html(results.daily[4].sunrise);
+       // $('#thursday').html(results.daily[4].weather);
+       $('#thursday').html(results.daily[4].temp);
    });
    $.get("https://api.openweathermap.org/data/2.5/onecall", {
        lat: 29.42,
@@ -161,8 +161,8 @@
    }).done(function (results){
        console.log('5 day forecast', results);
        $('#friday').html(results.daily[5].sunrise);
-       $('#friday').html(results.daily[5].sunrise);
-       $('#friday').html(results.daily[5].sunrise);
+       // $('#friday').html(results.daily[5].weather);
+       $('#friday').html(results.daily[5].temp);
    });
 
 
