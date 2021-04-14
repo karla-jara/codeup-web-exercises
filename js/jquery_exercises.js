@@ -42,8 +42,16 @@ $(document).ready(function (){
 
     var contentImportant = $('#message').html();
     alert(contentImportant);
+    var notice = $('#notice').html();
+    alert(notice);
+    //background yellow
 
-    //
+    $('p').css('background-color', 'yellow')
+
+    $('p').css({'fontStyle':'italic', 'fontSize':'24px', 'color':'blue'})
+
+
+
 
 
 
