@@ -4,15 +4,43 @@
     <meta charset="UTF-8">
     <title>BOM lecture</title>
 </head>
-<body>
-<script>
-    "use strict";
-    var count = 0;
-    var max = 10;
-    var interval = 1000;
+<body onload="exterminate(), startTimer()">
 
-    var intervalId = setInterval(function()
-    )
+
+<h2 id="message">This BOM will self destruct in <span id="timer"></span> seconds...</h2>
+<button id="defuser" onclick="defuse()">Defuse the BOM</button>
+
+
+
+<script>
+  'use strict';
+  var timerCount = 6
+
+  function countDown (){
+      if (timerCount >= 0) {
+      document.querySelector('span').innerHTML = timerCount;
+      console.log(timerCount);
+      }
+      timerCount--;
+  }
+
+  function startTimer (){
+      setInterval(countDown, 1000)
+  }
+
+  var timeoutID;
+
+  function exterminate() {
+      timeoutID = setTimeout(alert, 6000, 'EXTERMINATE!');
+      timerCount--;
+  }
+
+  // defuse the BOM
+  function defuse() {
+      clearTimeout(timeoutID);
+      alert("YOU'RE SAFE!")
+  }
+
 </script>
 
 </body>

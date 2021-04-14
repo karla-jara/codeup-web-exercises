@@ -10,6 +10,8 @@ changesizeBtn.addEventListener("click", function(e){
 
     targetBox.style.height = "500px";
     targetBox.style.width = "500px";
+
+    //the exact dbl size is 508 due to the 1px border. This example only took into consideration content size
 })
 
 //TODO: I have two CSS classes - toggleClass1 and toggleClass2 - that are currently unused. When the #toggleClass button is clicked, program a bit of JavaScript to toggle between those classes to see the background-color switch back and forth with each click. Bonus: Write your callback function in a variable and use it instead!

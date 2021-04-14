@@ -1,18 +1,4 @@
-
-// Below are examples of how to update add, or edit HTML elements
-
-// const title = document.querySelector('h1');
-//
-// console.log(title);
-// console.log(title.style.fontSize);
-// // title.style.margin = 'auto';
-// // title.style.margin = '50px';
-// title.style.color = 'crimson';
-// title.style.fontSize = '60px';
-// title.style.margin = '';
-
-
-// console.log("Am I hooked up?")
+console.log("Am I hooked up?")
 
 //TODO: When the #changeBoxSize button is clicked the box should double in size from what it was!
 
@@ -57,9 +43,9 @@ $("#box").hover(function(){
 // #input (where they type), #inputBtn (what they click), #userName (what should be replaced)
 
 
-//    $("#inputBtn").click(function (){
-//        $("#userName").html($("#input").val())
-// })
+   $("#inputBtn").click(function (){
+       $("#userName").html($("#input").val())
+})
 
 
 //TODO: Refactor the above work - after 5 seconds have passed from the user clicking #inputBtn and seeing #userName change, change the entire div of #helloUser to say "Let me know if you want to play a game. ."
@@ -76,6 +62,17 @@ $("#inputBtn").click(function (){
 
 
 
+// Below are examples of how to update add, or edit HTML elements
+
+// const title = document.querySelector('h1');
+//
+// console.log(title);
+// console.log(title.style.fontSize);
+// // title.style.margin = 'auto';
+// // title.style.margin = '50px';
+// title.style.color = 'crimson';
+// title.style.fontSize = '60px';
+// title.style.margin = '';
 
 
 
