@@ -24,7 +24,7 @@ $(document).ready(function (){
 
     $('p').dblclick(
         function(p_e){
-            $(this).css('font-size', '24px');
+            $(this).css('font-size', '18px');
     });
 
     // on hover over changes font to red
