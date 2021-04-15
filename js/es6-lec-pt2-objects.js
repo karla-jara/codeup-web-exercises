@@ -159,6 +159,8 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 //TODO TOGETHER: new way
 
 
+
+
 // console.log(a);
 // console.log(b);
 // console.log(c);
@@ -167,6 +169,7 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //TODO TOGETHER: To skip an element...
 
+const [a, ,c] = alphabet
 
 // console.log(a);
 // // console.log(b);
@@ -176,6 +179,7 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //TODO TOGETHER: To get all elements...Spread operator *BONUS
 
+const [a,b,c, ...rest] = alphabet;
 
 // console.log(a);
 // console.log(b);
@@ -198,6 +202,11 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //new way
 
+function tellMeAbout ({name, age}){
+    console.log(name); // 'codeup'
+	console.log(age); // 4
+
+}
 
 //
 // const person = {
