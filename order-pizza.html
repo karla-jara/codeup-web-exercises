@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </head>
 <body>
-<!-- Navbar content-->
+             <!-- Navbar content-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Pizza World</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,18 +32,18 @@
                     </form>
                 </li>
             </ul>
-        <div class="nav-signup">
-            <a class="nav-link" href="#"><i class="fa fa-user"></i> Sign Up</a>
-        </div>
+            <div class="nav-signup">
+                <a class="nav-link" href="#"><i class="fa fa-user"></i> Sign Up</a>
+            </div>
         </div>
     </nav>
-<!-- Jumbotron content-->
+             <!-- Jumbotron content-->
     <div class="jumbotron jumbotron-fluid d-none d-md-block">
         <div class="pizza">
             <h1 class="display-4">Welcome to Pizza World!</h1>
         </div>
     </div>
-<!-- Build your pizza content tabs-->
+           <!-- Build your pizza content tabs-->
     <div class="build-container">
     <h2 class="build-pizza">Build your own pizza!</h2>
         <ul class="nav nav-tabs">
@@ -58,53 +58,39 @@
             </li>
         </ul>
 <!-- Build your pizza content cards-->
-<div class="card-header">
-    Choose size and crust
-</div>
-<div class="card">
-    <div class="card-header">
-        Hand Tossed
-    </div>
+<div class="card-header">Choose size and crust</div>
+    <div class="card">
+        <div class="card-header">Hand Tossed</div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
             <li class="list-group-item">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="small" value="option2">
-                    <label class="form-check-label" for="small">
-                    Small (10")
-                    </label>
+                    <label class="form-check-label" for="small">Small (10")</label>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="medium" value="option2">
-                <label class="form-check-label" for="medium">
-                    Medium (12")
-                </label>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="medium" value="option2">
+                    <label class="form-check-label" for="medium">Medium (12")</label>
                 </div>
             </li>
         </ul>
     </div>
     <div class="card" >
-    <div class="card-header">
-        Crispy Thin
-    </div>
+        <div class="card-header">Crispy Thin</div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
             <li class="list-group-item">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="medium-thin" value="option2">
-                    <label class="form-check-label" for="medium-thin">
-                    Medium (12")
-                    </label>
+                    <label class="form-check-label" for="medium-thin">Medium (12")</label>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="large" value="option2">
-                    <label class="form-check-label" for="large">
-                    Large (14")
-                    </label>
+                    <label class="form-check-label" for="large">Large (14")</label>
                 </div>
             </li>
         </ul>
@@ -113,6 +99,35 @@
         <a class="btn btn-primary" id="next-step" href="#" role="button">Next step</a>
     </div>
     </div>
-
+<div class="card-header">Choose size and crust</div>
+        <div class="card-header">Choose size and crust</div>
+        <form>
+             <div class="form-group">
+                 <label for="exampleFormControlSelect1">Example select</label>
+                 <select class="form-control" id="exampleFormControlSelect1">
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                 </select>
+             </div>
+        </form>
+             <ul class="nav nav-tabs" id="myTab" role="tablist">
+                 <li class="nav-item" role="presentation">
+                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                 </li>
+                 <li class="nav-item" role="presentation">
+                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                 </li>
+                 <li class="nav-item" role="presentation">
+                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                 </li>
+             </ul>
+             <div class="tab-content" id="myTabContent">
+                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+             </div>
 </body>
 </html>

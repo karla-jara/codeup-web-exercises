@@ -20,4 +20,10 @@
 }
 .card-footer {
     border: 1px solid rgba(222,223,223,0.35);
+
+}
+
+#next-step {
+    position: absolute;
+    z-index: 10;
 }
