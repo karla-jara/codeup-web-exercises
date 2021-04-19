@@ -66,7 +66,16 @@ console.log(longestEmail);
 // let instructorsList = users.reduce((name, instructor => (instructor.name), ""))
 
 let instructorsList = users.map(function (item){
-    return item.name;
+    return `${item.name}`;
 })
 
-console.log(instructorsList.toString());
+// let instructorsList = users.reduce(function (acc, user){
+//     return `${acc} ${user.name}`;
+// }, 'instructors are: ').slice(0) + '.';
+
+let mapjoinSolution = `instructors are: ${users.map(user=>user.name).join(',')}.`;
+
+console.log(mapjoinSolution);
+
+console.log("instructors are: " + instructorsList.toString() + ".");
+
