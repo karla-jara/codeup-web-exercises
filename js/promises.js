@@ -14,17 +14,17 @@ let gitHubAPI = fetch("https://api.github.com/repos/karla-jara/codeup-web-exerci
 
     gitHubAPI.then((response)=>{return response.json()})
     .then((jsonData)=>{console.log(jsonData);
-    return jsonData.results(0)});
+    return jsonData.results});
 
 
 function getLastPushDate(githubUsername){
     let url = `https://api.github.com/users/${githubUsername}`
     let githubResponse = fetch(url,{headers: {'Authorization': `token${GIT_TOKEN}`}})
 }
-
+//
 //     return jsonData.results;
 // })
-//     .then ((results)=>{results.forEach((user) => console.log(`${user.username}`))
+//    then ((results) => {results.forEach((author) => console.log(`${user.author.commit}`))
 //     });
 
 // console.log(gitHubAPI);
