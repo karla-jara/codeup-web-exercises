@@ -59,7 +59,7 @@ $('#append-to-ul').click(function(){
 $(document).ready(function (){
     setTimeout(function (){
         $('#message').html("Goodbye, World!")
-    }, 6000);
+    }, 2000);
 });
 
 
@@ -68,6 +68,8 @@ $(document).ready(function (){
 $('#hl-toggle li').click(function (){
     $(this).toggleClass('star')
 });
+
+
 
 
 /** Q9: When the button with the id of upcase-name is clicked, the element with the id of output should display the text "Your name uppercased is: " + the value of the input element with the id of input transformed to uppercase **/
@@ -88,3 +90,9 @@ $('#font-grow li').dblclick(function(){
     $(this).css('font-size', doubleSize);
 });
 
+
+// Hide certain element on click
+
+$("button").click(function(){
+    $(".test").hide();
+});

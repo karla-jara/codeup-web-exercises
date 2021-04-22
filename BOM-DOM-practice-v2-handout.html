@@ -28,8 +28,12 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
     //TODO: When the button is clicked with the id of #inputButton, the value of what is inside of the input field of #userValue should effect the id of #output as so: #output should display the text "The number of words you entered is:" followed by the appropriate number representing the number of words from the user's input.
+    // <input id="userInput">
+    //     <button id="inputButton">How many words?</button>
+    //     <div id="output"></div>
 
-    $("#inputButton").click(function (){
+
+        $("#inputButton").click(function (){
         let userInput = $("#userInput").val();
 
         $("#output").html(`The number of words you have entered is: ${userInput.split(" ").length}`);
