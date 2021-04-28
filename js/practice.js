@@ -66,7 +66,7 @@ $(document).ready(function (){
 /** Q8: When a list item inside of the ul with the id of hl-toggle is first clicked, the background of the li that was clicked should change to yellow. When a list item that has a yellow background is clicked, the background should change back to the original background  **/
 
 $('#hl-toggle li').click(function (){
-    $(this).toggleClass('star')
+    $(this).toggleClass("star")
 });
 
 
