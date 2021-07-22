@@ -36,7 +36,6 @@ $('.star').hover(function (){
     $('#review-result').html(dataValue);
 });
 
-
 /** Q5: When the button with the id of go-to-btn is clicked change the window location to the url specified in the URL input with the id of custom-url. Consider adding http:// to your URLS if you want to test external domains **/
 
 $("#go-to-btn").click(function(){
