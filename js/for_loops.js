@@ -1,4 +1,19 @@
 "use strict";
+/*
+You must calculate the number of people there will be in three decades from now.
+
+The variable population is the world population now.
+Assume that every month, someone gives birth to more people n.
+Return the number of people there will be when the spaceship is complete.
+
+*/
+
+function futurePeople(population,n){
+    for (let i = 1; i <= 360; i++) {
+        population = population + n;
+    }
+    return population;
+}
 
 /*
 1.2 Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
