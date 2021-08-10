@@ -128,3 +128,24 @@ for (var i = 100; i >= 5; i = i - 5) {
 //                        could also use i-= 5 for the last statement
     console.log(i);
 }
+
+
+/*sum of groceries*/
+
+function getTotalPrice(groceries) {
+
+    var sum = 0;
+
+    for (var i = 0; i < groceries.length; i++) {
+        var currentProduct = groceries[i];
+        var product = currentProduct['quantity'] * currentProduct['price'];
+        sum += product;
+
+    }
+
+    var result = Number.parseFloat(sum).toFixed(1);
+    var finalAnswer = Number(result);
+
+    return finalAnswer;
+
+}
