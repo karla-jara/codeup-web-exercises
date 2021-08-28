@@ -112,3 +112,14 @@ function calcAge(age) {
     day=age*365;
     return day
 }
+
+//Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+
+function toArray(obj) {
+    let result = [];
+    for (let key in obj) {
+        let newArray = [key, obj[key]]
+        result.push(newArray)
+    }
+    return result;
+}
